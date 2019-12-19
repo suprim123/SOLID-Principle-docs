@@ -12,3 +12,9 @@ only that part of method calls and nothing else. Not even utility global
 functions related to module. Better separate them in another globally accessible
 class file. This will help in maintaining the class for that particular purpose, 
 and we can decide the visibility of class to specific module only.
+
+The single responsibility principle provides another substantial benefit. 
+Classes,software components and microservices that have only one responsibility 
+are much easier to explain, understand and implement than the ones that provide
+a solution for everything. This reduces the number of bugs, improves your development 
+speed, and makes your life as a software developer a lot easier.
