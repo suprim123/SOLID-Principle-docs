@@ -1,4 +1,7 @@
-Likov's Substitution Principle states that if a program module is using a Base class, then the reference to the Base class can
+
+Likov's Substitution Principle
+
+It states that if a program module is using a Base class, then the reference to the Base class can
  be replaced with a Derived class without affecting the functionality of the program module.
 
 example:
@@ -27,3 +30,17 @@ In mathematics, a Square is a Rectangle. Indeed it is a specialization of a rect
         return this.length * this.breadth;
     }
 }
+
+Git Pull
+    Git pull command is used to fetch and download content from a remote repository and immediately update the 
+    local repository to match that content. The git pull command is actually a combination of two other commands,
+     git fetch followed by git merge.
+
+How it works?
+    The git pull command first runs git fetch which downloads content from the specified remote repository. 
+    Then a git merge is executed to merge the remote content refs and heads into a new local merge commit.
+     To better demonstrate the pull and merging process let us consider the following example. Assume we have a repository 
+     with a master branch and a remote origin.
+
+
+
