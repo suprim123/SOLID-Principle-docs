@@ -1,0 +1,29 @@
+Likov's Substitution Principle states that if a program module is using a Base class, then the reference to the Base class can
+ be replaced with a Derived class without affecting the functionality of the program module.
+
+example:
+In mathematics, a Square is a Rectangle. Indeed it is a specialization of a rectangle. The "is a" makes you want to model this with
+ inheritance. However if in code you made Square derive from Rectangle, then a Square should be usable anywhere you expect a Rectangle.
+  This makes for some strange behavior.
+
+  public class Rectangle {
+
+    private int length;
+    private int breadth;
+
+    public int getLength() {
+        return length;
+    }
+    public void setLength(int length) {
+        this.length = length;
+    }
+    public int getBreadth() {
+        return breadth;
+    }
+    public void setBreadth(int breadth) {
+        this.breadth = breadth;
+    }
+    public int getArea() {
+        return this.length * this.breadth;
+    }
+}
