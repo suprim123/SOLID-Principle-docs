@@ -47,3 +47,12 @@ class Cuboid implements ShapeInterface, SolidShapeInterface {
 }
 This is a much better approach, but a pitfall to watch out for is when type-hinting these interfaces, 
 instead of using a ShapeInterface or a SolidShapeInterface.
+
+Git-Commit
+
+The git commit command captures a snapshot of the project's currently staged changes. 
+Committed snapshots can be thought of as “safe” versions of a project—Git will never 
+change them unless you explicitly ask it to. Prior to the execution of git commit, 
+The git add command is used to promote or 'stage' changes to the project that will be
+stored in a commit. These two commands git commit and git add are two of the most 
+frequently used.
