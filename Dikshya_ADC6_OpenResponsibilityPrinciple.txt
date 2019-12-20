@@ -1,0 +1,47 @@
+In programming, the open/closed principle states that software entities (classes, modules, functions, etc.) should be open for extensions, but closed for modification. Classes should be open for extension but closed for modification.open for extensions means that the behavior of the class can be extended without modifying the class. • It can be achieved by Abstraction.
+Example
+Shipped phone comes
+with the basics like camera
+operation, actual calls, text
+messages, etc.
+• But via the app store, you
+can extend the phone's
+capabilities to allow you to
+manage your to do list etc.
+• Your phone’s core
+system(Kernel OS) code are
+closed for the modification.
+public class BasicCoffeeApp {
+
+    private BasicCoffeeMachine coffeeMachine;
+
+    public BasicCoffeeApp(BasicCoffeeMachine coffeeMachine) {
+    this.coffeeMachine = coffeeMachine;
+    }
+
+    public Coffee prepareCoffee(CoffeeSelection selection) throws CoffeeException {
+    Coffee coffee = this.coffeeMachine.brewCoffee(selection);
+    System.out.println("Coffee is ready!");
+    return coffee;
+    }
+
+    public static void main(String[] args) {
+    // create a Map of available coffee beans
+    Map<CoffeeSelection, GroundCoffee> beans = new HashMap<CoffeeSelection, GroundCoffee>();
+    beans.put(CoffeeSelection.FILTER_COFFEE, new GroundCoffee(
+        "My favorite filter coffee bean", 1000));
+
+    // get a new CoffeeMachine object
+    BasicCoffeeMachine machine = new BasicCoffeeMachine(beans);
+
+    // Instantiate CoffeeApp
+    BasicCoffeeApp app = new BasicCoffeeApp(machine);
+
+    // brew a fresh coffee
+    try {
+        app.prepareCoffee(CoffeeSelection.FILTER_COFFEE);
+    } catch (CoffeeException e) {
+        e.printStackTrace();
+    }
+    } // end main
+} // end CoffeeApp
