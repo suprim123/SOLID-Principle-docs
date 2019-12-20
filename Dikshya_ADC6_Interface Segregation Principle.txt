@@ -1,0 +1,15 @@
+The Interface Segregation Principle was defined by Robert C. Martin while consulting for
+Xerox to help them build the software for their new printer systems. He defined it as:
+
+“Clients should not be forced to depend upon interfaces that they do not use.”
+
+Sounds obvious, doesn’t it? Well, as I will show you in this article, it’s pretty easy
+to violate this interface, especially if your software evolves and you have to add 
+more and more features. But more about that later.
+
+Similar to the Single Responsibility Principle, the goal of the Interface Segregation 
+Principle is to reduce the side effects and frequency of required changes by splitting 
+the software into multiple, independent parts.
+
+As I will show you in the following example, this is only achievable if you define your 
+interfaces so that they fit a specific client or task.
